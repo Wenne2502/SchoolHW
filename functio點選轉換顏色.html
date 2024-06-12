@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>06-jq-color</title>
+	<style>
+		.a{
+			width: 200px;
+			height: 200px;
+			clip-path: circle(50% at 50% 50%);
+			background-color: green;
+		}
+		.b{
+			width: 200px;
+			height: 200px;
+			clip-path: circle(50% at 50% 50%);
+			background-color: red;
+		}
+		.a:hover{
+			width: 200px;
+			height: 200px;
+		}
+	</style>
+</head>
+<body>
+	<div class="a" id="shape">123</div>
+	<script src="https://code.jquery.com/jquery-3.7.0.js"></script>
+	<script>
+		$(function(){
+			$('#shape').click(function(){
+				// $('h1').addClass('a');
+				// $('p').addClass('b');
+				// $('p').removeClass('b');
+				$('div').toggleClass('b');
+				$('div').toggleClass('a');
+			})
+		})
+	</script>
+</body>
+</html>

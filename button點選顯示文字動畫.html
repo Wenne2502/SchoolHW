@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>11010319_1</title>
+	<style>
+		img {
+			width: 100px;
+			border: 1px solid lightseagreen;
+			opacity: 0.5;
+		}
+
+	</style>
+	<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+	<script>
+		$( function () {
+				$("#p1").text("致理科大");
+				$("#bt1").on("click", function() {
+					$("#p1").hide(600);
+				});
+				$("#bt2").on("click", function() {
+					$("#p1").show(600);
+				});
+				$("#bt3").on("click", function() {
+					$("#p1").fadeIn(600);
+				});
+				$("#bt4").on("click", function() {
+					$("#p1").fadeOut(1000);
+				});
+				$("#bt5").on("click", function() {
+					$("#p1").slideDown(1000);
+				});
+				$("#bt6").on("click", function() {
+					$("#p1").slideUp(1000);
+				});
+				$("#bt7").on("click", function() {
+					$("img").animate({
+						width: "300px",
+						opacity: 1,
+						border: "10px",  
+					},1500);
+				});
+		});  
+		
+	</script>
+</head>
+<body>
+	<button id="bt1">hide</button> <button id="bt2">show</button>
+	<button id="bt3">FadeIn</button> <button id="bt4">FadeOut</button>
+	<button id="bt5">SlideDown</button> <button id="bt6">SlideUp</button>
+	<button id="bt7">Animate</button>
+	<h1 id="p1">測試</h1>
+	<img src="TXT.jpg" alt="">
+</body>
+</html>

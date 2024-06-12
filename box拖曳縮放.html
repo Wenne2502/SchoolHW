@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>11010319_2</title>
+	<style>
+		#div1 {width: 100px; height: 100px; padding: 0.5em; float: left; margin: 10px 10px 10px 0;}
+		#droppable { width: 150px; height: 150px; padding: 0.5em; float: left; margin: 10px; }
+		#resizable { position: absolute; top: 200px; width: 250px; height: 250px; padding: 0.5em; }
+  		#resizable h3 { text-align: center; margin: 0; }
+  		#div2 { position: absolute; top: 100px; left: 400px; width: 250px; height: 250px; padding: 0.5em; }
+  		#feedback { font-size: 1.4em; }
+		#selectable .ui-selecting { background: #FECA40; }
+		#selectable .ui-selected { background: #F39814; color: white; }
+		#selectable { list-style-type: none; margin: 0; padding: 0; width: 60%; }
+		#selectable li { margin: 3px; padding: 0.4em; font-size: 1.4em; height: 18px; }
+	</style>
+
+	<link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/sunny/jquery-ui.css">
+	<link rel="stylesheet" href="http://jqueryui.com/resources/demos/style.css">
+	<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+	<script>
+		$( function() {
+			$("#div1").draggable();
+			$( "#droppable" ).droppable({
+      			drop: function( event, ui ) {
+        		$( this ).addClass( "ui-state-highlight" ).find( "p" ).html( "Dropped!" );
+      			}
+			});
+			$( "#resizable" ).resizable();
+			//$( "#selectable" ).selectable();
+			$( "#selectable" ).sortable();
+		});
+	</script>
+</head>
+<body>
+	<div id="div1" class="ui-widget-content">
+	<p id="p1">致理科大</p>
+	</div>
+	<div id="droppable" class="ui-widget-header">
+		<p>請放置在這裡!</p>
+	</div>
+	<div id="resizable" class="ui-widget-content">
+  		<h3 class="ui-widget-header">缩放（Resizable）</h3>
+	</div>
+	<div id="div2">
+		<ol id="selectable">
+		  <li class="ui-widget-content">Item 1</li>
+		  <li class="ui-widget-content">Item 2</li>
+		  <li class="ui-widget-content">Item 3</li>
+		  <li class="ui-widget-content">Item 4</li>
+		  <li class="ui-widget-content">Item 5</li>
+		  <li class="ui-widget-content">Item 6</li>
+		  <li class="ui-widget-content">Item 7</li>
+		</ol>
+	</div>
+</body>
+</html>

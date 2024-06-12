@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>11010319_0329-7</title>
+	<style>
+		*{
+			margin: 0;
+			padding: 0;
+			box-sizing: border-box;
+		}
+		.wrap{
+			width: 140px;
+			height: 100px;
+			outline: 1px solid purple;
+			display: flex;
+		}
+		.box{
+			flex-basis: 100px;
+			outline: 1px solid green;
+		}
+		.box1{
+			background-color: lavender;
+			flex-shrink: 2;
+		}
+		.box2{
+			background-color: aqua;
+			flex-shrink: 1;
+		}
+	</style>
+</head>
+<body>
+	<!-- .wrap>.box.box$*2 -->
+	<div class="wrap">
+		<div class="box box1"></div>
+		<div class="box box2"></div>
+	</div>
+</body>
+</html>
