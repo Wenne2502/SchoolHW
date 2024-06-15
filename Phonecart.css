@@ -1,0 +1,174 @@
+body{
+    height: 1000px;
+    background-color: antiquewhite;
+    overflow: hidden;
+    margin: 0;
+}
+.flow{
+    /* background-color: antiquewhite;
+    border: 1px solid black; */
+    /* position: fixed; */
+    top:50px;
+}
+.total-product{
+    margin: 10px;
+    margin-bottom: 60px;
+    overflow: scroll;
+    width: 100%;
+    height:83vh;
+}
+h3{
+    text-align: center;
+    margin: 1.5em;
+}
+.product{
+    display: flex;
+    width: 100%;
+    height: 8em;
+}
+.checkbox{
+    width: 2em;
+}
+.image{
+    width: 8em;
+    cursor: pointer;
+}
+.goods{
+    float: left;
+    width: 60em;
+    cursor: pointer;
+}
+.space{
+    float: left;
+    width: 5em;
+}
+.price{
+    float: left;
+    width: 20em;
+}
+.bottomline{
+    position: sticky;
+    width: 100%;
+    height: 120px;
+    bottom: 0px;
+    background-color: #e9ad60;
+    border-radius: 25px;
+}
+.view{
+    position: absolute;
+    left: 2em;
+    bottom: 7.5vh;
+    color: black;
+}
+/* .btn{
+    position: absolute;
+    right: 3em;
+    bottom: 4vh;
+    background-color: #cca059;
+    color: brown;
+    border: 3px dotted #cca059;
+    border-radius: 50px;
+}
+.btn:hover{
+    background-color: #fff;
+    color: black;
+} */
+.btn {
+    position: absolute;
+    width: 8em;
+    height: 3em;
+    border-radius: 20em; /*圓角*/
+    font-size: 15px;
+    font-weight: bold;
+    /* font-family: inherit; */
+    border: none;
+    cursor: pointer;
+    overflow: hidden;
+    z-index: 1;
+    box-shadow: 6px 6px 12px #c5c5c5, -6px -6px 12px #ffffff; /*按鈕動畫漸變*/
+    /* top: 50%; 
+    left: 25%;  */
+    right: -5vw;
+    bottom: 4vh;
+    transform: translate(-50%, -50%); /* 使按钮居中 */
+}
+
+.btn::before {
+    content: '';
+    width: 0;
+    height: 3em;
+    border-radius: 20em;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-image: linear-gradient(to right, #b77729 0%, #ffd650 100%);
+    transition: .5s ease;
+    display: block;
+    z-index: -1;
+}
+.btn:hover::before {
+    width: 10em;
+}
+.btn span {
+    display: inline-block;
+    font-size: 1em;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    opacity: 0;
+    transform: translate(0, -20px);
+    transition: 0.25s cubic-bezier(0.5, -1, 0.5, 2);
+}
+.btn:before {
+    content: attr(data-text);
+    color:brown;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 100%;
+    left: 0;
+    /* font-size: 1em;
+    font-weight: bold; */
+    text-align: center;
+    text-decoration: none;
+    letter-spacing: 3px;
+    opacity: 1;
+    transform: translate(0, 0px);
+    transition: 0.25s cubic-bezier(0.5, -1, 0.5, 2);
+}
+
+.btn:hover:before,
+.btn:focus:before {
+    opacity: 0;
+    transform: translate(0, 20px);
+}
+.btn:hover span,
+.btn:focus span {
+    opacity: 1;
+    transform: translate(0, 0);
+}
+
+    .btn:hover span:nth-child(1),
+    .btn:focus span:nth-child(1) {
+        transition-delay: 0.025s;
+    }
+
+    .btn:hover span:nth-child(2),
+    .btn:focus span:nth-child(2) {
+        transition-delay: 0.05s;
+    }
+
+    .btn:hover span:nth-child(3),
+    .btn:focus span:nth-child(3) {
+        transition-delay: 0.075s;
+    }
+
+    .btn:hover span:nth-child(4),
+    .btn:focus span:nth-child(4) {
+        transition-delay: 0.1s;
+    }
+
+    .btn:hover span:nth-child(5),
+    .btnfocus span:nth-child(5) {
+        transition-delay: 0.125s;
+    }

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="cart.css">
+</head>
+<body>
+    <div class="flow">
+        <h3>購物車商品</h3>
+        <div class="total-product">
+        <div class="product" onclick=toproduct();>
+            <div class="image">
+                <img src="" alt="">
+            </div>
+            <div class="goods">
+                商品1
+            </div>
+            <div class="space"></div>
+            <div class="price">
+                $100
+            </div>
+        </div>
+        <div class="product">
+            <div class="image">
+                <img src="" alt="">
+            </div>
+            <div class="goods">
+                商品2
+            </div>
+            <div class="space"> </div>
+            <div class="price">
+                $50
+            </div>
+        </div>
+        <div class="product">
+            <div class="image">
+                <img src="" alt="">
+            </div>
+            <div class="goods">
+                商品3
+            </div>
+            <div class="space"></div>
+            <div class="price">
+                $25
+            </div>
+        </div>
+        <div class="product">
+            <div class="image">
+                <img src="" alt="">
+            </div>
+            <div class="goods">
+                商品4
+            </div>
+            <div class="space"></div>
+            <div class="price">
+                $100
+            </div>
+        </div>
+        <div class="product">
+            <div class="image">
+                <img src="" alt="">
+            </div>
+            <div class="goods">
+                商品5
+            </div>
+            <div class="space"> </div>
+            <div class="price">
+                $50
+            </div>
+        </div>
+        <div class="product">
+            <div class="image">
+                <img src="" alt="">
+            </div>
+            <div class="goods">
+                商品6
+            </div>
+            <div class="space"> </div>
+            <div class="price">
+                $75
+            </div>
+        </div>
+        <div class="product">
+            <div class="image">
+                <img src="" alt="">
+            </div>
+            <div class="goods">
+                商品7
+            </div>
+            <div class="space"> </div>
+            <div class="price">
+                $80
+            </div>
+        </div>
+    </div>
+    <div class="bottomline">
+        <span class="view" id="view">10件商品未檢視</span>
+        <button class="btn" onclick=toCart();>查看我的購物車</button>
+    </div>         
+</body>
+<script>
+    let amount = document.querySelector('#view');
+    let count = document.querySelectorAll('.product').length;
+    console.log(count);
+    amount.innerHTML = `${count}件商品未檢視`;
+
+    function toproduct() {
+        window.location.href = "/Home/Product?productId=123456";
+    }
+
+    function toCart() {
+        window.location.herf = "/Home/ShoppingCart"
+    }
+</script>
+</html>

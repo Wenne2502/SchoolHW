@@ -1,0 +1,68 @@
+body{
+    height: 1000px;
+}
+.flow{
+    background-color: antiquewhite;
+    border: 1px solid black;
+    position: fixed;
+    top:50px;
+    padding-bottom: 15px;
+    
+}
+.total-product{
+    margin-bottom: 60px;
+    overflow-y: auto;
+    width: 27em;
+    height:15em;
+}
+h3{
+    text-align: center;
+}
+.product{
+    display: flex;
+    width: 25em;
+    height: 3em;
+}
+.image{
+    width: 4em;
+}
+.goods{
+    float: left;
+    width: 15em;
+}
+.space{
+    float: left;
+    width: 2em;
+}
+.price{
+    float: left;
+    width: 4em;
+}
+.bottomline{
+    position: sticky;
+    bottom: 10px;
+    width: 100%;
+    background-color: white;
+    /* height: 10px; */
+}
+.view{
+    position: absolute;
+    left: 2em;
+    bottom: 3vh;
+    color: black;
+}
+.btn{
+    position: absolute;
+    right: 3em;
+    bottom: 3vh;
+    background-color: #cca059;
+    color: brown;
+    border: 3px dotted #cca059;
+    border-radius: 50px;
+}
+.btn:hover{
+    background-color: #fff;
+    color: black;
+}
+
+
